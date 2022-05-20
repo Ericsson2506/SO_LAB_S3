@@ -25,7 +25,7 @@
 ip [OPTION] OBJECT {COMMAND | help}
 where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
                    tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
-                   netns|l2tp|fou|macsec|tcp_metrics|token|netconf|ila|
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
                    vrf | sr | nexthop }
        OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
                     -h[uman-readable] | -iec | -j[son] | -p[retty] |
@@ -34,8 +34,10 @@ where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
                     -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
                     -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
                     -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
-                    -c[olor]}```
+                    -c[olor]}
+```
 - nslookup
+
 ```sh
 nslookup [-option] [name | -] [server]
 nslookup -type=ns *****
@@ -92,22 +94,39 @@ Działanie systemu DNS przebiega zgodnie z następującymi etapami:
 
 3. Konstrukcja plików /etc/hosts i /etc/hostname/
 - Konstrukcja /etc/hosts
+
 ![hosts](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/hosts.png)
 - Konstrukcja /etc/hostname
+
 ![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/hostname.png)
+
 4. Budowa plików /etc/bind9/named.conf.local i plików typu db.*
 - taki folder jak bind9 nie istnieje
+
 ![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/bind9.png)
 - db.local
+
 ![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/db_local.png)
 ---
 #### Kluczowe Screeny
-- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/bind9_service.png)
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep.png)
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep.png)
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep1.png)
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep1.png)
-- polecenie **nslookup** wywołane na stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/nslookup.png)
+- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/bind9_service.png)
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep.png)
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep.png)
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep1.png)
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep1.png)
+- polecenie **nslookup** wywołane na stacji roboczej
+
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/nslookup.png)
 ---
 #### Podsumowanie
 Dzięki tym zadaniom nauczyłem się jak ustawić server dns, jak również przypomniałem sobie pakiet netplan. Poznałem budowę plików hosts i hostname. 
