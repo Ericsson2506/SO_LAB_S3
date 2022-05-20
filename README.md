@@ -1,3 +1,4 @@
+![[WWSI_clr.png]]
 ## Warszawska Wyższa Szkoła Informatyki
 # Sytemy Operacyjnee
 # Sprawozdanie 3
@@ -93,18 +94,20 @@ Działanie systemu DNS przebiega zgodnie z następującymi etapami:
 - Konstrukcja /etc/hosts
 ![[hosts.png]]
 - Konstrukcja /etc/hostname
-![[Pasted image 20220520002127.png]]
+![[hostname.png]]
 4. Budowa plików /etc/bind9/named.conf.local i plików typu db.*
 - taki folder jak bind9 nie istnieje
-![[Pasted image 20220520002706.png]]
+![[bind9.png]]
 - db.local
-![[Pasted image 20220520002911.png]]
+![[db_local.png]]
 ---
-- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![[Pasted image 20220520010020.png]]
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![[Pasted image 20220520014310.png]]
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![[Pasted image 20220520014505.png]]
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![[Pasted image 20220520014834.png]]
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![[Pasted image 20220520015012.png]]
-- polecenie **nslookup** wywołane na stacji roboczej![[Pasted image 20220520015633.png]]
+#### Kluczowe Screeny
+- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![[bind9_service.png]]
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![[stacyjkaep.png]]
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![[serverep.png]]
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![[stacyjkaep1.png]]
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![[serverep1.png]]
+- polecenie **nslookup** wywołane na stacji roboczej![[nslookup.png]]
 ---
+#### Podsumowanie
 Dzięki tym zadaniom nauczyłem się jak ustawić server dns, jak również przypomniałem sobie pakiet netplan. Poznałem budowę plików hosts i hostname. 
