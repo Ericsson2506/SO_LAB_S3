@@ -1,4 +1,4 @@
-![[WWSI_clr.png]]
+![logo](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/WWSI_clr.png)
 ## Warszawska Wyższa Szkoła Informatyki
 # Sytemy Operacyjnee
 # Sprawozdanie 3
@@ -92,22 +92,22 @@ Działanie systemu DNS przebiega zgodnie z następującymi etapami:
 
 3. Konstrukcja plików /etc/hosts i /etc/hostname/
 - Konstrukcja /etc/hosts
-![[hosts.png]]
+![hosts](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/hosts.png)
 - Konstrukcja /etc/hostname
-![[hostname.png]]
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/hostname.png)
 4. Budowa plików /etc/bind9/named.conf.local i plików typu db.*
 - taki folder jak bind9 nie istnieje
-![[bind9.png]]
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/bind9.png)
 - db.local
-![[db_local.png]]
+![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/db_local.png)
 ---
 #### Kluczowe Screeny
-- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![[bind9_service.png]]
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![[stacyjkaep.png]]
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![[serverep.png]]
-- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![[stacyjkaep1.png]]
-- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![[serverep1.png]]
-- polecenie **nslookup** wywołane na stacji roboczej![[nslookup.png]]
+- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/bind9_service.png)
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep.png)
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep.png)
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/stacyjkaep1.png)
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/serverep1.png)
+- polecenie **nslookup** wywołane na stacji roboczej![](https://raw.githubusercontent.com/Ericsson2506/SO_LAB_S3/main/img/nslookup.png)
 ---
 #### Podsumowanie
 Dzięki tym zadaniom nauczyłem się jak ustawić server dns, jak również przypomniałem sobie pakiet netplan. Poznałem budowę plików hosts i hostname. 
