@@ -19,11 +19,6 @@
 ---
 ##### Podstawy teoretyczne:
 1. Polecenia do diagnostyki sieciowej i ich atrybuty ip, nslookup, host, dig
-2. Co to jest serwer DNS i zasada jego działania
-3. Konstrukcja plików /etc/hosts i /etc/hostname/
-4. Budowa plików /etc/bind9/named.conf.local i plików typu db.*
----
-1. 
 - IP
 ```sh
 ip [OPTION] OBJECT {COMMAND | help}
@@ -83,7 +78,7 @@ Dig -t dx ****
 Dig -t any ***
 Dig -x ****
 ```
-2. 
+2. Co to jest serwer DNS i zasada jego działania
 - DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe. Serwer DNS wyszukuje adres IP danej strony na podstawie wpisu użytkownika zamieszczonego w polu adresu wyszukiwarki.
 Jak działa serwer DNS?
 Działanie systemu DNS przebiega zgodnie z następującymi etapami:
@@ -94,4 +89,22 @@ Działanie systemu DNS przebiega zgodnie z następującymi etapami:
 - Serwer DNS dostarcza w informacji zwrotnej do komputera użytkownika (do przeglądarki stron internetowych) numer odpowiadający konkretnej domenie.
 - Komputer nawiązuje połączenie z adresem IP, co umożliwia wyświetlenie zawartości strony www. Wszystko dzieje się w bardzo krótkim czasie, dlatego działanie serwera DNS jest dla nas niezauważalne.
 
-3. 
+3. Konstrukcja plików /etc/hosts i /etc/hostname/
+- Konstrukcja /etc/hosts
+![[hosts.png]]
+- Konstrukcja /etc/hostname
+![[Pasted image 20220520002127.png]]
+4. Budowa plików /etc/bind9/named.conf.local i plików typu db.*
+- taki folder jak bind9 nie istnieje
+![[Pasted image 20220520002706.png]]
+- db.local
+![[Pasted image 20220520002911.png]]
+---
+- polecenie **sudo systemctl status bind9.service** abym widział że program prawidłowo działa![[Pasted image 20220520010020.png]]
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly** z serwera![[Pasted image 20220520014310.png]]
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly** ze stacji roboczej![[Pasted image 20220520014505.png]]
+- ping wysłany na nazwę mnemoniczną **ping stacyjkainicjaly.nazwisko.local** z serwera![[Pasted image 20220520014834.png]]
+- ping wysłany na nazwę mnemoniczną **ping serwerinicjaly.nazwisko.local** ze stacji roboczej![[Pasted image 20220520015012.png]]
+- polecenie **nslookup** wywołane na stacji roboczej![[Pasted image 20220520015633.png]]
+---
+Dzięki tym zadaniom nauczyłem się jak ustawić server dns, jak również przypomniałem sobie pakiet netplan. Poznałem budowę plików hosts i hostname. 
